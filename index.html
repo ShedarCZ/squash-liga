@@ -77,7 +77,7 @@
 
     .how-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
       gap: 16px;
     }
 
@@ -86,19 +86,37 @@
       border: 0.5px solid #e0e0e0;
       border-radius: 12px;
       padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
 
     .how-num {
-      font-size: 28px;
+      font-size: 26px;
       font-weight: 600;
       color: #1D9E75;
-      margin-bottom: 8px;
     }
 
-    .how-card p {
+    .how-title {
       font-size: 14px;
+      font-weight: 600;
+      color: #1a1a1a;
+      line-height: 1.4;
+    }
+
+    .how-desc {
+      font-size: 13px;
       color: #555;
       line-height: 1.6;
+    }
+
+    .how-date {
+      margin-top: 6px;
+      font-size: 11px;
+      color: #aaa;
+      line-height: 1.5;
+      border-top: 0.5px solid #f0f0f0;
+      padding-top: 8px;
     }
 
     .benefits {
@@ -218,19 +236,27 @@
   <div class="how-grid">
     <div class="how-card">
       <div class="how-num">01</div>
-      <p>Přihlásíš se přes HeroHero a staneš se členem ligy. Sdělíš nám svůj kontakt a úroveň hry.</p>
+      <div class="how-title">Registrace</div>
+      <div class="how-desc">Přihlásíš se přes HeroHero, sdělíš kontakt a úroveň hry.</div>
+      <div class="how-date">Kdykoli během měsíce</div>
     </div>
     <div class="how-card">
       <div class="how-num">02</div>
-      <p>K 2. dni každého měsíce dostaneš seznam soupeřů včetně jejich kontaktů. Domluvíte se sami na čase a místě — Vysoké Mýto nebo Litomyšl.</p>
+      <div class="how-title">Dostaneš soupeře</div>
+      <div class="how-desc">Obdržíš seznam 2–3 soupeřů včetně jejich kontaktů. Domluvíte se sami na čase a místě.</div>
+      <div class="how-date">Vždy k 2. dni v měsíci</div>
     </div>
     <div class="how-card">
       <div class="how-num">03</div>
-      <p>Zápasy odehrajte do 27. dne v měsíci do půlnoci. Výsledky průběžně hlásíte do ligy.</p>
+      <div class="how-title">Odehraj zápasy</div>
+      <div class="how-desc">Zahrajte si ve Vysokém Mýtě nebo Litomyšli a nahlaste výsledky.</div>
+      <div class="how-date">Do 27. dne v měsíci do půlnoci</div>
     </div>
     <div class="how-card">
       <div class="how-num">04</div>
-      <p>Od 28. do 1. dne probíhá vyhodnocení. Podle výsledků se posunete v celkovém žebříčku nahoru nebo dolů. A pak vše začíná znovu.</p>
+      <div class="how-title">Vyhodnocení</div>
+      <div class="how-desc">Podle výsledků se posunete v žebříčku nahoru nebo dolů. Pak vše začíná znovu.</div>
+      <div class="how-date">28. až 1. den v měsíci</div>
     </div>
   </div>
 </div>
