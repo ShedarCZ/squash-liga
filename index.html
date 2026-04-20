@@ -75,9 +75,9 @@
       margin-bottom: 24px;
     }
 
-    .how-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    .how-list {
+      display: flex;
+      flex-direction: column;
       gap: 16px;
     }
 
@@ -85,38 +85,46 @@
       background: white;
       border: 0.5px solid #e0e0e0;
       border-radius: 12px;
-      padding: 20px;
+      padding: 24px 28px;
       display: flex;
-      flex-direction: column;
-      gap: 8px;
+      align-items: flex-start;
+      gap: 24px;
     }
 
     .how-num {
-      font-size: 26px;
+      font-size: 32px;
       font-weight: 600;
       color: #1D9E75;
+      flex-shrink: 0;
+      min-width: 48px;
+    }
+
+    .how-content {
+      flex: 1;
     }
 
     .how-title {
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 600;
       color: #1a1a1a;
-      line-height: 1.4;
+      margin-bottom: 6px;
     }
 
     .how-desc {
-      font-size: 13px;
+      font-size: 14px;
       color: #555;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     .how-date {
-      margin-top: 6px;
-      font-size: 11px;
+      margin-top: 10px;
+      font-size: 12px;
       color: #aaa;
-      line-height: 1.5;
-      border-top: 0.5px solid #f0f0f0;
-      padding-top: 8px;
+      display: inline-block;
+      background: #f8f8f6;
+      border: 0.5px solid #e0e0e0;
+      border-radius: 20px;
+      padding: 3px 12px;
     }
 
     .benefits {
@@ -233,31 +241,44 @@
 
 <div class="section">
   <h2>Jak to funguje</h2>
-  <div class="how-grid">
+  <div class="how-list">
+
     <div class="how-card">
       <div class="how-num">01</div>
-      <div class="how-title">Registrace</div>
-      <div class="how-desc">Přihlásíš se přes HeroHero, sdělíš kontakt a úroveň hry.</div>
-      <div class="how-date">Kdykoli během měsíce</div>
+      <div class="how-content">
+        <div class="how-title">Registrace</div>
+        <div class="how-desc">Přihlásíš se přes HeroHero a staneš se členem ligy. Sdělíš nám svůj kontakt a úroveň hry — podle toho tě zařadíme mezi podobně silné hráče.</div>
+        <span class="how-date">Kdykoli během měsíce</span>
+      </div>
     </div>
+
     <div class="how-card">
       <div class="how-num">02</div>
-      <div class="how-title">Dostaneš soupeře</div>
-      <div class="how-desc">Obdržíš seznam 2–3 soupeřů včetně jejich kontaktů. Domluvíte se sami na čase a místě.</div>
-      <div class="how-date">Vždy k 2. dni v měsíci</div>
+      <div class="how-content">
+        <div class="how-title">Dostaneš soupeře</div>
+        <div class="how-desc">Každý měsíc obdržíš seznam 2–3 soupeřů na tvé úrovni včetně jejich kontaktů. Domluvíte se sami — kdy a kde si zahrajete je jen na vás.</div>
+        <span class="how-date">Vždy k 2. dni v měsíci</span>
+      </div>
     </div>
+
     <div class="how-card">
       <div class="how-num">03</div>
-      <div class="how-title">Odehraj zápasy</div>
-      <div class="how-desc">Zahrajte si ve Vysokém Mýtě nebo Litomyšli a nahlaste výsledky.</div>
-      <div class="how-date">Do 27. dne v měsíci do půlnoci</div>
+      <div class="how-content">
+        <div class="how-title">Odehraj zápasy</div>
+        <div class="how-desc">Zahrajte si ve Vysokém Mýtě nebo Litomyšli — dle vlastní domluvy. Po odehrání nahlaste výsledek do ligy.</div>
+        <span class="how-date">Do 27. dne v měsíci do půlnoci</span>
+      </div>
     </div>
+
     <div class="how-card">
       <div class="how-num">04</div>
-      <div class="how-title">Vyhodnocení</div>
-      <div class="how-desc">Podle výsledků se posunete v žebříčku nahoru nebo dolů. Pak vše začíná znovu.</div>
-      <div class="how-date">28. až 1. den v měsíci</div>
+      <div class="how-content">
+        <div class="how-title">Vyhodnocení a žebříček</div>
+        <div class="how-desc">Podle výsledků se posunete v celkovém žebříčku nahoru nebo dolů. Vyhraješ? Příští měsíc tě čekají silnější soupeři. Prohraješ? Dostaneš vyrovnanější partii. A pak vše začíná znovu.</div>
+        <span class="how-date">28. až 1. den v měsíci</span>
+      </div>
     </div>
+
   </div>
 </div>
 
