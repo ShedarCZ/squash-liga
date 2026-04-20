@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Squash liga Vysoké Mýto & Litomyšl</title>
+  <title>Squash liga Mýto–Litomyšl</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -27,17 +27,31 @@
     }
 
     header p {
-      font-size: 16px;
-      color: #aaa;
-      max-width: 480px;
-      margin: 0 auto;
+      font-size: 17px;
+      color: #bbb;
+      max-width: 520px;
+      margin: 0 auto 28px;
+      line-height: 1.6;
     }
+
+    .cta-main {
+      display: inline-block;
+      background: #1D9E75;
+      color: white;
+      padding: 16px 40px;
+      border-radius: 8px;
+      font-size: 17px;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .cta-main:hover { background: #178a64; }
 
     .cities {
       display: flex;
       justify-content: center;
       gap: 10px;
-      margin-top: 20px;
+      margin-top: 24px;
     }
 
     .city-pill {
@@ -46,8 +60,8 @@
       font-size: 13px;
     }
 
-    .pill-Vysoké Mýto { background: #1D9E75; color: #fff; }
-    .pill-Litomyšl { background: #378ADD; color: #fff; }
+    .pill-vm { background: #1D9E75; color: #fff; }
+    .pill-lt { background: #378ADD; color: #fff; }
 
     .section {
       max-width: 680px;
@@ -59,7 +73,6 @@
       font-size: 20px;
       font-weight: 600;
       margin-bottom: 24px;
-      color: #1a1a1a;
     }
 
     .how-grid {
@@ -88,50 +101,31 @@
       line-height: 1.6;
     }
 
-    .ladder {
+    .benefits {
       background: white;
       border: 0.5px solid #e0e0e0;
       border-radius: 12px;
-      overflow: hidden;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
     }
 
-    .ladder-header {
-      display: grid;
-      grid-template-columns: 36px 1fr 60px 60px;
-      gap: 8px;
-      padding: 10px 16px;
-      font-size: 12px;
-      color: #888;
-      border-bottom: 0.5px solid #e0e0e0;
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15px;
+      color: #333;
+      line-height: 1.5;
     }
 
-    .ladder-row {
-      display: grid;
-      grid-template-columns: 36px 1fr 60px 60px;
-      gap: 8px;
-      padding: 12px 16px;
-      align-items: center;
-      border-bottom: 0.5px solid #f0f0f0;
-      font-size: 14px;
+    .check {
+      color: #1D9E75;
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-top: 1px;
     }
-
-    .ladder-row:last-child { border-bottom: none; }
-
-    .rank {
-      font-weight: 600;
-      color: #888;
-      text-align: center;
-    }
-
-    .rank.gold { color: #B8860B; }
-    .rank.silver { color: #888; }
-    .rank.bronze { color: #8B5E3C; }
-
-    .player-name { font-weight: 500; }
-    .player-city { font-size: 11px; color: #888; margin-top: 1px; }
-
-    .wins { text-align: center; color: #1D9E75; font-weight: 500; }
-    .losses { text-align: center; color: #aaa; }
 
     .cta-box {
       background: #1a1a1a;
@@ -151,57 +145,53 @@
     .cta-box p {
       font-size: 15px;
       color: #aaa;
-      margin-bottom: 24px;
-    }
-
-    .price {
-      font-size: 40px;
-      font-weight: 700;
-      color: white;
-      margin-bottom: 4px;
-    }
-
-    .price-sub {
-      font-size: 13px;
-      color: #888;
       margin-bottom: 28px;
+      line-height: 1.6;
     }
 
     .cta-btn {
       display: inline-block;
       background: #1D9E75;
       color: white;
-      padding: 14px 36px;
+      padding: 16px 40px;
       border-radius: 8px;
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 500;
       text-decoration: none;
-      cursor: pointer;
-      border: none;
     }
 
     .cta-btn:hover { background: #178a64; }
 
-    .includes {
-      margin-top: 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      text-align: left;
-      max-width: 280px;
-      margin-left: auto;
-      margin-right: auto;
+    .herohero-note {
+      background: white;
+      border: 0.5px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 24px;
     }
 
-    .include-item {
+    .herohero-note h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #1a1a1a;
+    }
+
+    .herohero-note p {
       font-size: 14px;
-      color: #bbb;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 10px;
     }
 
-    .check { color: #1D9E75; font-size: 16px; }
+    .herohero-note p:last-child { margin-bottom: 0; }
+
+    .herohero-link {
+      color: #1D9E75;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .herohero-link:hover { text-decoration: underline; }
 
     footer {
       text-align: center;
@@ -214,11 +204,12 @@
 <body>
 
 <header>
-  <h1>Squash liga Vysoké Mýto & Litomyšl</h1>
-  <p>Jedna liga pro dvě města. Hraj, zlepšuj se, posouvej se žebříčkem.</p>
+  <h1>Squash liga Mýto–Litomyšl</h1>
+  <p>Hledáš parťáka na squash? Už nemusíš. Propojujeme komunitu hráčů z Vysokého Mýta a Litomyšle — bez stresu, pro radost a pohyb.</p>
+  <a href="https://herohero.co/squashliga" class="cta-main">Chci se přihlásit do ligy</a>
   <div class="cities">
-    <span class="city-pill pill-Vysoké Mýto">Vysoké Mýto</span>
-    <span class="city-pill pill-Litomyšl">Litomyšl</span>
+    <span class="city-pill pill-vm">Vysoké Mýto</span>
+    <span class="city-pill pill-lt">Litomyšl</span>
   </div>
 </header>
 
@@ -227,83 +218,63 @@
   <div class="how-grid">
     <div class="how-card">
       <div class="how-num">01</div>
-      <p>Zaregistruješ se a zaplatíš měsíční členství 99 Kč.</p>
+      <p>Přihlásíš se přes HeroHero a staneš se členem ligy.</p>
     </div>
     <div class="how-card">
       <div class="how-num">02</div>
-      <p>Každý měsíc dostaneš 4–5 soupeřů přidělených systémem.</p>
+      <p>Každý měsíc dostaneš 2–3 soupeře, kteří hrají podobně jako ty.</p>
     </div>
     <div class="how-card">
       <div class="how-num">03</div>
-      <p>Domluvíte se na kurtu ve Vysoké Mýto nebo Litomyšl a odehrajete zápas.</p>
+      <p>Domluvíte se sami, zda si zahrajete v Mýtě nebo Litomyšli.</p>
     </div>
     <div class="how-card">
       <div class="how-num">04</div>
-      <p>Vítěz stoupá, poražený klesá. Nejlepší hráči získávají ceny.</p>
+      <p>Vyhraješ? Postupuješ výš. Prohraješ? Příště dostaneš vyrovnanějšího soupeře.</p>
     </div>
   </div>
 </div>
 
 <div class="section" style="padding-top: 0">
-  <h2>Aktuální žebříček</h2>
-  <div class="ladder">
-    <div class="ladder-header">
-      <div></div>
-      <div>hráč</div>
-      <div style="text-align:center">výhry</div>
-      <div style="text-align:center">prohry</div>
+  <h2>Co získáš členstvím</h2>
+  <div class="benefits">
+    <div class="benefit-item">
+      <span class="check">✓</span>
+      <span>Zařazení do oficiálního žebříčku ligy</span>
     </div>
-    <div class="ladder-row">
-      <div class="rank gold">1</div>
-      <div><div class="player-name">Tomáš Novák</div><div class="player-city">Vysoké Mýto</div></div>
-      <div class="wins">10</div>
-      <div class="losses">2</div>
+    <div class="benefit-item">
+      <span class="check">✓</span>
+      <span>Pravidelný přísun nových kontaktů na spoluhráče</span>
     </div>
-    <div class="ladder-row">
-      <div class="rank silver">2</div>
-      <div><div class="player-name">Jiří Beneš</div><div class="player-city">Litomyšl</div></div>
-      <div class="wins">9</div>
-      <div class="losses">2</div>
+    <div class="benefit-item">
+      <span class="check">✓</span>
+      <span>Přístup k diskuzi a domlouvání náhradních zápasů</span>
     </div>
-    <div class="ladder-row">
-      <div class="rank bronze">3</div>
-      <div><div class="player-name">Pavel Dvořák</div><div class="player-city">Vysoké Mýto</div></div>
-      <div class="wins">9</div>
-      <div class="losses">4</div>
-    </div>
-    <div class="ladder-row">
-      <div class="rank">4</div>
-      <div><div class="player-name">Martin Horák</div><div class="player-city">Litomyšl</div></div>
-      <div class="wins">7</div>
-      <div class="losses">3</div>
-    </div>
-    <div class="ladder-row">
-      <div class="rank">5</div>
-      <div><div class="player-name">Ondřej Kratochvíl</div><div class="player-city">Vysoké Mýto</div></div>
-      <div class="wins">7</div>
-      <div class="losses">5</div>
+    <div class="benefit-item">
+      <span class="check">✓</span>
+      <span>S rostoucí komunitou plánujeme společné turnaje o věcné ceny a slevy na kurty</span>
     </div>
   </div>
 </div>
 
 <div class="section" style="padding-top: 0">
   <div class="cta-box">
-    <h2>Chci hrát v lize</h2>
-    <p>Připoj se k hráčům z Vysokého Mýta a Litomyšle.</p>
-    <div class="price">99 Kč</div>
-    <div class="price-sub">měsíčně · zruš kdykoli</div>
-    <a href="#" class="cta-btn">Přihlásit se do ligy</a>
-    <div class="includes">
-      <div class="include-item"><span class="check">✓</span> Přístup k žebříčku a výsledkům</div>
-      <div class="include-item"><span class="check">✓</span> 4–5 zápasů každý měsíc</div>
-      <div class="include-item"><span class="check">✓</span> Statistiky a přehled sezony</div>
-      <div class="include-item"><span class="check">✓</span> Šance na měsíční ceny</div>
-    </div>
+    <h2>Připoj se k lize</h2>
+    <p>Žádný stres, žádné závazky. Hrajeme pro radost a pohyb.<br>Přestaneš platit členství — přestaneš hrát. Jednoduché.</p>
+    <a href="https://herohero.co/squashliga" class="cta-btn">Chci se přihlásit do ligy</a>
+  </div>
+</div>
+
+<div class="section" style="padding-top: 0">
+  <div class="herohero-note">
+    <h3>Proč HeroHero?</h3>
+    <p>Pro správu členství používáme českou platformu HeroHero. Je to nejjednodušší model — platíš, hraješ. Přestaneš platit, přestaneš hrát. Žádná složitá registrace, žádné papírování.</p>
+    <p>Pravidla ligy, diskuze a veškeré informace najdeš přímo na naší HeroHero stránce: <a href="https://herohero.co/squashliga" class="herohero-link">herohero.co/squashliga</a></p>
   </div>
 </div>
 
 <footer>
-  © 2025 Squash liga Vysoké Mýto & Litomyšl · kontakt: tvuj@email.cz
+  © 2025 Squash liga Mýto–Litomyšl · Dotazy? Napiš na HeroHero.
 </footer>
 
 </body>
